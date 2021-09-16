@@ -22,7 +22,7 @@ $("button").click(()=> {
         $(`.card-summary6`).html(`${data.results[2].synopsis}`);
         $(`.c`).attr(`href`, `${data.results[2].url}`);
         $(`.card-score6`).append(`${data.results[2].score}`);
-    console.log(data.results);
+    // console.log(data.results);
     });
 });
 
@@ -48,3 +48,6 @@ $.get(`https://api.jikan.moe/v3/top/anime/1/bypopularity`,(topData)=>{
         $(`.f`).attr(`href`, `${topData.top[2].url}`);
         $(`.card-rank3`).append(`${topData.top[2].rank}`);
 });
+
+let backgroundMusic = document.querySelector("audio");
+backgroundMusic.volume = 0.1;
